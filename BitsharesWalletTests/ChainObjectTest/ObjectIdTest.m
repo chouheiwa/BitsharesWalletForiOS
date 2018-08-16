@@ -1,18 +1,18 @@
 //
-//  BitsharesWalletTests.m
+//  ObjectIdTest.m
 //  BitsharesWalletTests
 //
-//  Created by flh on 2018/8/8.
+//  Created by flh on 2018/8/15.
 //  Copyright © 2018年 flh. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-
-@interface BitsharesWalletTests : XCTestCase
+#import "ObjectId.h"
+@interface ObjectIdTest : XCTestCase
 
 @end
 
-@implementation BitsharesWalletTests
+@implementation ObjectIdTest
 
 - (void)setUp {
     [super setUp];
@@ -24,16 +24,20 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testObjectIdCreate {
+    NSString *test = @"1.2.5";
+    
+    ObjectId *object = [ObjectId generateFromObject:test];
+    
+    XCTAssert(object != nil);
+    
+    XCTAssert([test isEqualToString:[object generateToTransferObject]]);
+    
+    XCTAssert([object isEqual:test]);
+    
+    XCTAssert(![object isEqual:@"1.0.5"]);
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
 }
 
 @end
