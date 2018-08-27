@@ -72,7 +72,7 @@
 }
 
 - (void)testSignCompact {
-    PrivateKey *pri = [[PrivateKey alloc] initWithPrivateKey:@"5KcTYx3RKi4h1wnQQ8xJCMtK8P5JTXSqbnZCA1ed7qWQDQsEeFz"];
+    PrivateKey *pri = [[PrivateKey alloc] initWithPrivateKey:@"5JzhaUrXLTrAXmFqEF1AMnNJN9oCPgJN66NLHb2rZ9d8VQaeQiQ"];
     
     char c[] = {-72,46,90,81,28,-49,42,87,26,98,114,-125,-89,115,-79,-99,76,89,-78,-5,29,46,-115,-1,-105,-78,79,69,-128,-92,-113,-60};
     
@@ -88,7 +88,7 @@
 }
 
 - (void)testBitAddress {
-    PrivateKey *pri = [[PrivateKey alloc] initWithPrivateKey:@"5KcTYx3RKi4h1wnQQ8xJCMtK8P5JTXSqbnZCA1ed7qWQDQsEeFz"];
+    PrivateKey *pri = [[PrivateKey alloc] initWithPrivateKey:@"5JzhaUrXLTrAXmFqEF1AMnNJN9oCPgJN66NLHb2rZ9d8VQaeQiQ"];
     
     NSLog(@"%ld",pri.keyData.length);
     
@@ -96,7 +96,7 @@
     
     XCTAssert(address.keyData.length == 20);
     
-    BOOL result = [address.description isEqualToString:[NSString stringWithFormat:@"%@2o4YSHeqf9gawD1sHghLVZ5BpigqePuAD",[BaseConfig prefix]]];
+    BOOL result = [address.description isEqualToString:[NSString stringWithFormat:@"%@HAvmpngiExPpiaYXGGPjwoK2ciH6xNbSx",[BaseConfig prefix]]];
     
     XCTAssert(result);
 }

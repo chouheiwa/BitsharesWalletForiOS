@@ -80,7 +80,7 @@
         [wallet getAccount:@"tusowner5" success:^(AccountObject *tusowner) {
             NSError *error;
             
-            [wallet importKey:[[PrivateKey alloc] initWithPrivateKey:@"5KcTYx3RKi4h1wnQQ8xJCMtK8P5JTXSqbnZCA1ed7qWQDQsEeFz"] forAccount:tusowner error:&error];
+            [wallet importKey:[[PrivateKey alloc] initWithPrivateKey:@"5JzhaUrXLTrAXmFqEF1AMnNJN9oCPgJN66NLHb2rZ9d8VQaeQiQ"] forAccount:tusowner error:&error];
             
             
             
