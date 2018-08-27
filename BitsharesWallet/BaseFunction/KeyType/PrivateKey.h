@@ -11,9 +11,11 @@
 @interface PrivateKey : NSObject
 
 /**
- 32字节长度字符串
+ 32字节长度二进制数据
  */
 @property (nonatomic, strong, readonly) NSData *keyData;
+
+- (instancetype)initWithKeyData:(NSData *)keyData;
 
 - (instancetype)initWithPrivateKey:(NSString *)privateKey;
 

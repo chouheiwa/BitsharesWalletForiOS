@@ -21,4 +21,9 @@
     return nil;
 }
 
+- (id)caculateFeeWithFeeDic:(NSDictionary *)feeDictionary payFeeAsset:(id)asset {
+    NSAssert(NO, @"- (id)caculateFeeWithFeeDic:(NSDictionary *)feeDictionary payFeeAsset:(id)asset not implement");
+    return nil;
+}
+
 @end

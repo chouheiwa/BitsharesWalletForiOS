@@ -10,7 +10,16 @@
 #import "NSDate+UTCDate.h"
 #import "OperationContent.h"
 #import "PackData.h"
+#import "NSData+HashData.h"
+#import "NSData+Base16.h"
 @implementation Transaction
+
+- (instancetype)init {
+    if (self = [super init]) {
+        self.extensions = @[];
+    }
+    return self;
+}
 
 - (instancetype)initWithDic:(NSDictionary *)dic {
     if (self = [super init]) {
@@ -82,6 +91,33 @@
     [data appendData:[PackData packUnsigedInteger:self.extensions.count]];
     
     return [data copy];
+}
+
+- (void)setRefBlock:(NSString *)refBlock {
+    NSData *data = [[NSData alloc] initWithBase16EncodedString:refBlock options:(NSDataBase16DecodingOptionsDefault)];
+    
+    [data logDataDetail:@"Data"];
+    
+    int (^endian_reverse_u32)( int x ) = ^(int x) {
+        return (((x >> 0x18) & 0xFF)        )
+        | (((x >> 0x10) & 0xFF) << 0x08)
+        | (((x >> 0x08) & 0xFF) << 0x10)
+        | (((x        ) & 0xFF) << 0x18)
+        ;
+    };
+    
+    int (^getIntFromRipemd160)(int i,NSData *data) = ^ (int i,NSData *data) {
+        Byte *bytes = (Byte *)data.bytes;
+        
+        return ((bytes[i * 4 + 3] & 0xff) << 24) | ((bytes[i * 4 + 2] & 0xff) << 16) | ((bytes[i * 4 + 1] & 0xff) << 8) | ((bytes[i * 4 ] & 0xff));
+    };
+    
+    int ref_block_num = getIntFromRipemd160(0,data);
+    
+    int ref_block_prefix = getIntFromRipemd160(1,data);
+    
+    _ref_block_num = endian_reverse_u32(ref_block_num);
+    _ref_block_prefix = ref_block_prefix & -1;
 }
 
 @end

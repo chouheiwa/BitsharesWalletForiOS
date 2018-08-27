@@ -12,6 +12,52 @@
 		781128E0211C8A6A002337D9 /* PrivateKey.mm in Sources */ = {isa = PBXBuildFile; fileRef = 781128DE211C8A6A002337D9 /* PrivateKey.mm */; };
 		78112A15211D5A01002337D9 /* NSData+CopyWithRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 78112A13211D5A01002337D9 /* NSData+CopyWithRange.h */; };
 		78112A16211D5A01002337D9 /* NSData+CopyWithRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 78112A14211D5A01002337D9 /* NSData+CopyWithRange.m */; };
+		7816DA4F2126DA06002D18AC /* AccountObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA4D2126DA06002D18AC /* AccountObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA502126DA06002D18AC /* AccountObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA4E2126DA06002D18AC /* AccountObject.m */; };
+		7816DA532126E4BA002D18AC /* AuthorityObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA512126E4BA002D18AC /* AuthorityObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA542126E4BA002D18AC /* AuthorityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA522126E4BA002D18AC /* AuthorityObject.m */; };
+		7816DA572126E626002D18AC /* BitAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA552126E626002D18AC /* BitAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA582126E626002D18AC /* BitAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA562126E626002D18AC /* BitAddress.m */; };
+		7816DA5B2126FC7C002D18AC /* PublicKeyAuthorityObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA592126FC7C002D18AC /* PublicKeyAuthorityObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA5C2126FC7C002D18AC /* PublicKeyAuthorityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA5A2126FC7C002D18AC /* PublicKeyAuthorityObject.m */; };
+		7816DA5F2126FC9C002D18AC /* BitAddressAuthorityObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA5D2126FC9C002D18AC /* BitAddressAuthorityObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA602126FC9C002D18AC /* BitAddressAuthorityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA5E2126FC9C002D18AC /* BitAddressAuthorityObject.m */; };
+		7816DA642127040C002D18AC /* AccountAuthoriyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA622127040C002D18AC /* AccountAuthoriyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA652127040C002D18AC /* AccountAuthoriyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA632127040C002D18AC /* AccountAuthoriyObject.m */; };
+		7816DA6821270FC1002D18AC /* AuthoriyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA6721270FC1002D18AC /* AuthoriyTest.m */; };
+		7816DA6D21284C04002D18AC /* AccountOptionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA6B21284C04002D18AC /* AccountOptionObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA6E21284C04002D18AC /* AccountOptionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA6C21284C04002D18AC /* AccountOptionObject.m */; };
+		7816DA7121284D3A002D18AC /* VoteIdObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA6F21284D3A002D18AC /* VoteIdObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA7221284D3A002D18AC /* VoteIdObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA7021284D3A002D18AC /* VoteIdObject.m */; };
+		7816DA7621284FAD002D18AC /* NSObject+DataToObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA7421284FAD002D18AC /* NSObject+DataToObject.h */; };
+		7816DA7721284FAD002D18AC /* NSObject+DataToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA7521284FAD002D18AC /* NSObject+DataToObject.m */; };
+		7816DA7921285171002D18AC /* DataToTransferObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA7821285171002D18AC /* DataToTransferObjectTest.m */; };
+		7816DA7C21291290002D18AC /* DataTransformBind.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA7A21291290002D18AC /* DataTransformBind.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA7D21291290002D18AC /* DataTransformBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA7B21291290002D18AC /* DataTransformBind.m */; };
+		7816DA8121294E70002D18AC /* AccountOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA8021294E70002D18AC /* AccountOptionsTest.m */; };
+		7816DA8421296334002D18AC /* SpecialAuthorityObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA8221296334002D18AC /* SpecialAuthorityObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA8521296334002D18AC /* SpecialAuthorityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA8321296334002D18AC /* SpecialAuthorityObject.m */; };
+		7816DA8A21297C89002D18AC /* AccountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA8921297C89002D18AC /* AccountTest.m */; };
+		7816DA8E212989D7002D18AC /* BitsharesWalletObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA8C212989D7002D18AC /* BitsharesWalletObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA8F212989D7002D18AC /* BitsharesWalletObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA8D212989D7002D18AC /* BitsharesWalletObject.m */; };
+		7816DA9121298E26002D18AC /* BitsharesWalletError.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA9021298E26002D18AC /* BitsharesWalletError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA9321299147002D18AC /* WebsocketBlockChainApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA9221299147002D18AC /* WebsocketBlockChainApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA962129ACF0002D18AC /* BitsharesLocalWalletFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA942129ACF0002D18AC /* BitsharesLocalWalletFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA972129ACF0002D18AC /* BitsharesLocalWalletFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA952129ACF0002D18AC /* BitsharesLocalWalletFile.m */; };
+		7816DA9B2129B38A002D18AC /* WalletExtraKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DA992129B38A002D18AC /* WalletExtraKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DA9C2129B38A002D18AC /* WalletExtraKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA9A2129B38A002D18AC /* WalletExtraKey.m */; };
+		7816DA9F212A7463002D18AC /* LocalFileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DA9E212A7463002D18AC /* LocalFileTest.m */; };
+		7816DAA6212AAB9A002D18AC /* PlainKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DAA4212AAB9A002D18AC /* PlainKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DAA7212AAB9A002D18AC /* PlainKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DAA5212AAB9A002D18AC /* PlainKey.m */; };
+		7816DAAA212D4A6D002D18AC /* AssetObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DAA8212D4A6D002D18AC /* AssetObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DAAB212D4A6D002D18AC /* AssetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DAA9212D4A6D002D18AC /* AssetObject.m */; };
+		7816DAAF212D4E25002D18AC /* AssetOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DAAD212D4E25002D18AC /* AssetOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DAB0212D4E25002D18AC /* AssetOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DAAE212D4E25002D18AC /* AssetOption.m */; };
+		7816DAB3212D5221002D18AC /* AssetPermissionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DAB1212D5221002D18AC /* AssetPermissionObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DAB4212D5221002D18AC /* AssetPermissionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DAB2212D5221002D18AC /* AssetPermissionObject.m */; };
+		7816DABA212E71A3002D18AC /* AssetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DAB9212E71A3002D18AC /* AssetTest.m */; };
+		7816DABD212E7AC0002D18AC /* Price.h in Headers */ = {isa = PBXBuildFile; fileRef = 7816DABB212E7AC0002D18AC /* Price.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7816DABE212E7AC0002D18AC /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = 7816DABC212E7AC0002D18AC /* Price.m */; };
 		781B14A1211A9471006B9043 /* BitsharesWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781B1497211A9471006B9043 /* BitsharesWallet.framework */; };
 		781B14A6211A9471006B9043 /* BitsharesWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781B14A5211A9471006B9043 /* BitsharesWalletTests.m */; };
 		781B14A8211A9471006B9043 /* BitsharesWallet.h in Headers */ = {isa = PBXBuildFile; fileRef = 781B149A211A9471006B9043 /* BitsharesWallet.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,43 +69,56 @@
 		782A608B211D5B9200EB2F99 /* NSDataCopyWithRangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 782A608A211D5B9200EB2F99 /* NSDataCopyWithRangeTests.m */; };
 		782A608F211D5E7A00EB2F99 /* SHA256Diggest.h in Headers */ = {isa = PBXBuildFile; fileRef = 782A608D211D5E7A00EB2F99 /* SHA256Diggest.h */; };
 		782A6090211D5E7A00EB2F99 /* SHA256Diggest.m in Sources */ = {isa = PBXBuildFile; fileRef = 782A608E211D5E7A00EB2F99 /* SHA256Diggest.m */; };
-		78326CF92123C28F00838BE2 /* ObjectToDataProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78326CF82123C28F00838BE2 /* ObjectToDataProtocol.h */; };
+		78326CF92123C28F00838BE2 /* ObjectToDataProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78326CF82123C28F00838BE2 /* ObjectToDataProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		788DD42921265646006C1161 /* UploadBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 788DD42721265646006C1161 /* UploadBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		788DD42A21265646006C1161 /* UploadBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 788DD42821265646006C1161 /* UploadBaseModel.m */; };
+		788DD42D212667DF006C1161 /* UploadParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 788DD42B212667DF006C1161 /* UploadParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		788DD42E212667DF006C1161 /* UploadParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 788DD42C212667DF006C1161 /* UploadParams.m */; };
+		788DD43221266EA3006C1161 /* CallBackModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 788DD43021266EA3006C1161 /* CallBackModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		788DD43321266EA3006C1161 /* CallBackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 788DD43121266EA3006C1161 /* CallBackModel.m */; };
+		788DD4372126B374006C1161 /* WebsocketResultModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 788DD4352126B374006C1161 /* WebsocketResultModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		788DD4382126B374006C1161 /* WebsocketResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 788DD4362126B374006C1161 /* WebsocketResultModel.m */; };
 		7890A5F12123CCAB00B01BA0 /* ObjectIdTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A5F02123CCAB00B01BA0 /* ObjectIdTest.m */; };
 		7890A5F32123CDBF00B01BA0 /* AssetAmountObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A5F22123CDBF00B01BA0 /* AssetAmountObjectTest.m */; };
 		7890A5F72123D1C700B01BA0 /* PackData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A5F52123D1C700B01BA0 /* PackData.h */; };
 		7890A5F82123D1C700B01BA0 /* PackData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A5F62123D1C700B01BA0 /* PackData.m */; };
-		7890A5FC2123DB9200B01BA0 /* TransferOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A5FA2123DB9200B01BA0 /* TransferOperation.h */; };
+		7890A5FC2123DB9200B01BA0 /* TransferOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A5FA2123DB9200B01BA0 /* TransferOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7890A5FD2123DB9200B01BA0 /* TransferOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A5FB2123DB9200B01BA0 /* TransferOperation.m */; };
-		7890A6002123DD1B00B01BA0 /* Memo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A5FE2123DD1B00B01BA0 /* Memo.h */; };
+		7890A6002123DD1B00B01BA0 /* Memo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A5FE2123DD1B00B01BA0 /* Memo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7890A6012123DD1B00B01BA0 /* Memo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A5FF2123DD1B00B01BA0 /* Memo.m */; };
 		7890A6032124028C00B01BA0 /* MemoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A6022124028C00B01BA0 /* MemoTest.m */; };
-		7890A6072124271900B01BA0 /* BaseConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A6052124271900B01BA0 /* BaseConfig.h */; };
+		7890A6072124271900B01BA0 /* BaseConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A6052124271900B01BA0 /* BaseConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7890A6082124271900B01BA0 /* BaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A6062124271900B01BA0 /* BaseConfig.m */; };
-		7890A60C2125201100B01BA0 /* Transaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A60A2125201100B01BA0 /* Transaction.h */; };
+		7890A60C2125201100B01BA0 /* Transaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A60A2125201100B01BA0 /* Transaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7890A60D2125201100B01BA0 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A60B2125201100B01BA0 /* Transaction.m */; };
-		7890A6102125202B00B01BA0 /* OperationContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A60E2125202B00B01BA0 /* OperationContent.h */; };
+		7890A6102125202B00B01BA0 /* OperationContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A60E2125202B00B01BA0 /* OperationContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7890A6112125202B00B01BA0 /* OperationContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A60F2125202B00B01BA0 /* OperationContent.m */; };
 		7890A6172125269500B01BA0 /* TransferOperationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A6162125269500B01BA0 /* TransferOperationTest.m */; };
 		7890A6192125461700B01BA0 /* OperationContentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A6182125461700B01BA0 /* OperationContentTest.m */; };
 		7890A61D21254C7800B01BA0 /* NSDate+UTCDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A61B21254C7800B01BA0 /* NSDate+UTCDate.h */; };
 		7890A61E21254C7800B01BA0 /* NSDate+UTCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A61C21254C7800B01BA0 /* NSDate+UTCDate.m */; };
-		7890A6212125570400B01BA0 /* SignedTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A61F2125570400B01BA0 /* SignedTransaction.h */; };
+		7890A6212125570400B01BA0 /* SignedTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 7890A61F2125570400B01BA0 /* SignedTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7890A6222125570400B01BA0 /* SignedTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890A6202125570400B01BA0 /* SignedTransaction.m */; };
-		78C006802123BE0D00CF8CE6 /* AssetAmountObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C0067E2123BE0D00CF8CE6 /* AssetAmountObject.h */; };
+		78C006802123BE0D00CF8CE6 /* AssetAmountObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C0067E2123BE0D00CF8CE6 /* AssetAmountObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78C006812123BE0D00CF8CE6 /* AssetAmountObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C0067F2123BE0D00CF8CE6 /* AssetAmountObject.m */; };
+		78C84EB5213385D0004DE8AB /* ChainDynamicGlobalProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C84EB3213385D0004DE8AB /* ChainDynamicGlobalProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78C84EB6213385D0004DE8AB /* ChainDynamicGlobalProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C84EB4213385D0004DE8AB /* ChainDynamicGlobalProperties.m */; };
+		78C84EB821339225004DE8AB /* ChainDynamicGlobalPropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C84EB721339225004DE8AB /* ChainDynamicGlobalPropertiesTest.m */; };
+		78C84EBB2133E642004DE8AB /* WebsocketResultErrorParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C84EB92133E642004DE8AB /* WebsocketResultErrorParse.h */; };
+		78C84EBC2133E642004DE8AB /* WebsocketResultErrorParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C84EBA2133E642004DE8AB /* WebsocketResultErrorParse.m */; };
 		78DC36F32121B45700A4B4D7 /* NSData+Base16.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DC36F12121B45600A4B4D7 /* NSData+Base16.h */; };
 		78DC36F42121B45700A4B4D7 /* NSData+Base16.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DC36F22121B45700A4B4D7 /* NSData+Base16.m */; };
-		78DC36F92121B6B900A4B4D7 /* ChainId.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DC36F72121B6B900A4B4D7 /* ChainId.h */; };
+		78DC36F92121B6B900A4B4D7 /* ChainId.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DC36F72121B6B900A4B4D7 /* ChainId.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78DC36FA2121B6B900A4B4D7 /* ChainId.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DC36F82121B6B900A4B4D7 /* ChainId.m */; };
 		78DC36FC2121B73B00A4B4D7 /* libsecp256k1_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F6B5EC2121249C00D445D9 /* libsecp256k1_arm64.a */; };
 		78DC36FD2121B73B00A4B4D7 /* libsecp256k1_armv7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F6B5EB2121249C00D445D9 /* libsecp256k1_armv7.a */; };
 		78DC36FE2121B73B00A4B4D7 /* libsecp256k1_i386.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F6B646212155CC00D445D9 /* libsecp256k1_i386.a */; };
 		78DC36FF2121B73B00A4B4D7 /* libsecp256k1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F6B64A2121567D00D445D9 /* libsecp256k1.a */; };
-		78DC37032122DD2000A4B4D7 /* WebsocketClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DC37012122DD2000A4B4D7 /* WebsocketClient.h */; };
+		78DC37032122DD2000A4B4D7 /* WebsocketClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DC37012122DD2000A4B4D7 /* WebsocketClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78DC37042122DD2000A4B4D7 /* WebsocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DC37022122DD2000A4B4D7 /* WebsocketClient.m */; };
-		78DC37092123B31D00A4B4D7 /* BaseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DC37072123B31D00A4B4D7 /* BaseOperation.h */; };
+		78DC37092123B31D00A4B4D7 /* BaseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DC37072123B31D00A4B4D7 /* BaseOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78DC370A2123B31D00A4B4D7 /* BaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DC37082123B31D00A4B4D7 /* BaseOperation.m */; };
-		78DC370D2123B52100A4B4D7 /* ObjectId.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DC370B2123B52100A4B4D7 /* ObjectId.h */; };
+		78DC370D2123B52100A4B4D7 /* ObjectId.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DC370B2123B52100A4B4D7 /* ObjectId.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78DC370E2123B52100A4B4D7 /* ObjectId.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DC370C2123B52100A4B4D7 /* ObjectId.m */; };
 		78EC9D1F21255A2F00DBC447 /* SignedTransactionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EC9D1E21255A2F00DBC447 /* SignedTransactionTest.m */; };
 		78F6B5E4211D66F700D445D9 /* SHA256DiggestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B5E3211D66F700D445D9 /* SHA256DiggestTests.m */; };
@@ -69,7 +128,7 @@
 		78F6B63B212136C800D445D9 /* Diggest.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B639212136C800D445D9 /* Diggest.m */; };
 		78F6B63E21213A1E00D445D9 /* RIPEMD160Diggest.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F6B63C21213A1E00D445D9 /* RIPEMD160Diggest.h */; };
 		78F6B63F21213A1E00D445D9 /* RIPEMD160Diggest.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B63D21213A1E00D445D9 /* RIPEMD160Diggest.m */; };
-		78F6B6422121528400D445D9 /* PublicKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F6B6402121528400D445D9 /* PublicKey.h */; };
+		78F6B6422121528400D445D9 /* PublicKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F6B6402121528400D445D9 /* PublicKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78F6B6432121528400D445D9 /* PublicKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B6412121528400D445D9 /* PublicKey.m */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +148,52 @@
 		781128DE211C8A6A002337D9 /* PrivateKey.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PrivateKey.mm; sourceTree = "<group>"; };
 		78112A13211D5A01002337D9 /* NSData+CopyWithRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CopyWithRange.h"; sourceTree = "<group>"; };
 		78112A14211D5A01002337D9 /* NSData+CopyWithRange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CopyWithRange.m"; sourceTree = "<group>"; };
+		7816DA4D2126DA06002D18AC /* AccountObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountObject.h; sourceTree = "<group>"; };
+		7816DA4E2126DA06002D18AC /* AccountObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountObject.m; sourceTree = "<group>"; };
+		7816DA512126E4BA002D18AC /* AuthorityObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthorityObject.h; sourceTree = "<group>"; };
+		7816DA522126E4BA002D18AC /* AuthorityObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthorityObject.m; sourceTree = "<group>"; };
+		7816DA552126E626002D18AC /* BitAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitAddress.h; sourceTree = "<group>"; };
+		7816DA562126E626002D18AC /* BitAddress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitAddress.m; sourceTree = "<group>"; };
+		7816DA592126FC7C002D18AC /* PublicKeyAuthorityObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicKeyAuthorityObject.h; sourceTree = "<group>"; };
+		7816DA5A2126FC7C002D18AC /* PublicKeyAuthorityObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicKeyAuthorityObject.m; sourceTree = "<group>"; };
+		7816DA5D2126FC9C002D18AC /* BitAddressAuthorityObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitAddressAuthorityObject.h; sourceTree = "<group>"; };
+		7816DA5E2126FC9C002D18AC /* BitAddressAuthorityObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitAddressAuthorityObject.m; sourceTree = "<group>"; };
+		7816DA622127040C002D18AC /* AccountAuthoriyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountAuthoriyObject.h; sourceTree = "<group>"; };
+		7816DA632127040C002D18AC /* AccountAuthoriyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountAuthoriyObject.m; sourceTree = "<group>"; };
+		7816DA6721270FC1002D18AC /* AuthoriyTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthoriyTest.m; sourceTree = "<group>"; };
+		7816DA6B21284C04002D18AC /* AccountOptionObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountOptionObject.h; sourceTree = "<group>"; };
+		7816DA6C21284C04002D18AC /* AccountOptionObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountOptionObject.m; sourceTree = "<group>"; };
+		7816DA6F21284D3A002D18AC /* VoteIdObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoteIdObject.h; sourceTree = "<group>"; };
+		7816DA7021284D3A002D18AC /* VoteIdObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoteIdObject.m; sourceTree = "<group>"; };
+		7816DA7421284FAD002D18AC /* NSObject+DataToObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DataToObject.h"; sourceTree = "<group>"; };
+		7816DA7521284FAD002D18AC /* NSObject+DataToObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DataToObject.m"; sourceTree = "<group>"; };
+		7816DA7821285171002D18AC /* DataToTransferObjectTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataToTransferObjectTest.m; sourceTree = "<group>"; };
+		7816DA7A21291290002D18AC /* DataTransformBind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTransformBind.h; sourceTree = "<group>"; };
+		7816DA7B21291290002D18AC /* DataTransformBind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTransformBind.m; sourceTree = "<group>"; };
+		7816DA8021294E70002D18AC /* AccountOptionsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountOptionsTest.m; sourceTree = "<group>"; };
+		7816DA8221296334002D18AC /* SpecialAuthorityObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialAuthorityObject.h; sourceTree = "<group>"; };
+		7816DA8321296334002D18AC /* SpecialAuthorityObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialAuthorityObject.m; sourceTree = "<group>"; };
+		7816DA8921297C89002D18AC /* AccountTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountTest.m; sourceTree = "<group>"; };
+		7816DA8C212989D7002D18AC /* BitsharesWalletObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitsharesWalletObject.h; sourceTree = "<group>"; };
+		7816DA8D212989D7002D18AC /* BitsharesWalletObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitsharesWalletObject.m; sourceTree = "<group>"; };
+		7816DA9021298E26002D18AC /* BitsharesWalletError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitsharesWalletError.h; sourceTree = "<group>"; };
+		7816DA9221299147002D18AC /* WebsocketBlockChainApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebsocketBlockChainApi.h; sourceTree = "<group>"; };
+		7816DA942129ACF0002D18AC /* BitsharesLocalWalletFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitsharesLocalWalletFile.h; sourceTree = "<group>"; };
+		7816DA952129ACF0002D18AC /* BitsharesLocalWalletFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitsharesLocalWalletFile.m; sourceTree = "<group>"; };
+		7816DA992129B38A002D18AC /* WalletExtraKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalletExtraKey.h; sourceTree = "<group>"; };
+		7816DA9A2129B38A002D18AC /* WalletExtraKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletExtraKey.m; sourceTree = "<group>"; };
+		7816DA9E212A7463002D18AC /* LocalFileTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalFileTest.m; sourceTree = "<group>"; };
+		7816DAA4212AAB9A002D18AC /* PlainKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlainKey.h; sourceTree = "<group>"; };
+		7816DAA5212AAB9A002D18AC /* PlainKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlainKey.m; sourceTree = "<group>"; };
+		7816DAA8212D4A6D002D18AC /* AssetObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetObject.h; sourceTree = "<group>"; };
+		7816DAA9212D4A6D002D18AC /* AssetObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetObject.m; sourceTree = "<group>"; };
+		7816DAAD212D4E25002D18AC /* AssetOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetOption.h; sourceTree = "<group>"; };
+		7816DAAE212D4E25002D18AC /* AssetOption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetOption.m; sourceTree = "<group>"; };
+		7816DAB1212D5221002D18AC /* AssetPermissionObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetPermissionObject.h; sourceTree = "<group>"; };
+		7816DAB2212D5221002D18AC /* AssetPermissionObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetPermissionObject.m; sourceTree = "<group>"; };
+		7816DAB9212E71A3002D18AC /* AssetTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetTest.m; sourceTree = "<group>"; };
+		7816DABB212E7AC0002D18AC /* Price.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Price.h; sourceTree = "<group>"; };
+		7816DABC212E7AC0002D18AC /* Price.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Price.m; sourceTree = "<group>"; };
 		781B1497211A9471006B9043 /* BitsharesWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitsharesWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		781B149A211A9471006B9043 /* BitsharesWallet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitsharesWallet.h; sourceTree = "<group>"; };
 		781B149B211A9471006B9043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +209,14 @@
 		782A608D211D5E7A00EB2F99 /* SHA256Diggest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHA256Diggest.h; sourceTree = "<group>"; };
 		782A608E211D5E7A00EB2F99 /* SHA256Diggest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHA256Diggest.m; sourceTree = "<group>"; };
 		78326CF82123C28F00838BE2 /* ObjectToDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectToDataProtocol.h; sourceTree = "<group>"; };
+		788DD42721265646006C1161 /* UploadBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadBaseModel.h; sourceTree = "<group>"; };
+		788DD42821265646006C1161 /* UploadBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadBaseModel.m; sourceTree = "<group>"; };
+		788DD42B212667DF006C1161 /* UploadParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadParams.h; sourceTree = "<group>"; };
+		788DD42C212667DF006C1161 /* UploadParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadParams.m; sourceTree = "<group>"; };
+		788DD43021266EA3006C1161 /* CallBackModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallBackModel.h; sourceTree = "<group>"; };
+		788DD43121266EA3006C1161 /* CallBackModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallBackModel.m; sourceTree = "<group>"; };
+		788DD4352126B374006C1161 /* WebsocketResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebsocketResultModel.h; sourceTree = "<group>"; };
+		788DD4362126B374006C1161 /* WebsocketResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebsocketResultModel.m; sourceTree = "<group>"; };
 		7890A5F02123CCAB00B01BA0 /* ObjectIdTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectIdTest.m; sourceTree = "<group>"; };
 		7890A5F22123CDBF00B01BA0 /* AssetAmountObjectTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetAmountObjectTest.m; sourceTree = "<group>"; };
 		7890A5F52123D1C700B01BA0 /* PackData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackData.h; sourceTree = "<group>"; };
@@ -127,6 +240,11 @@
 		7890A6202125570400B01BA0 /* SignedTransaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignedTransaction.m; sourceTree = "<group>"; };
 		78C0067E2123BE0D00CF8CE6 /* AssetAmountObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetAmountObject.h; sourceTree = "<group>"; };
 		78C0067F2123BE0D00CF8CE6 /* AssetAmountObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetAmountObject.m; sourceTree = "<group>"; };
+		78C84EB3213385D0004DE8AB /* ChainDynamicGlobalProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainDynamicGlobalProperties.h; sourceTree = "<group>"; };
+		78C84EB4213385D0004DE8AB /* ChainDynamicGlobalProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainDynamicGlobalProperties.m; sourceTree = "<group>"; };
+		78C84EB721339225004DE8AB /* ChainDynamicGlobalPropertiesTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainDynamicGlobalPropertiesTest.m; sourceTree = "<group>"; };
+		78C84EB92133E642004DE8AB /* WebsocketResultErrorParse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebsocketResultErrorParse.h; sourceTree = "<group>"; };
+		78C84EBA2133E642004DE8AB /* WebsocketResultErrorParse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebsocketResultErrorParse.m; sourceTree = "<group>"; };
 		78DC36F12121B45600A4B4D7 /* NSData+Base16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base16.h"; sourceTree = "<group>"; };
 		78DC36F22121B45700A4B4D7 /* NSData+Base16.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base16.m"; sourceTree = "<group>"; };
 		78DC36F72121B6B900A4B4D7 /* ChainId.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainId.h; sourceTree = "<group>"; };
@@ -186,6 +304,8 @@
 				781128DE211C8A6A002337D9 /* PrivateKey.mm */,
 				78F6B6402121528400D445D9 /* PublicKey.h */,
 				78F6B6412121528400D445D9 /* PublicKey.m */,
+				7816DA552126E626002D18AC /* BitAddress.h */,
+				7816DA562126E626002D18AC /* BitAddress.m */,
 				78F6B5E72121249C00D445D9 /* secp256k1 */,
 			);
 			path = KeyType;
@@ -198,6 +318,132 @@
 				78112A14211D5A01002337D9 /* NSData+CopyWithRange.m */,
 			);
 			path = "NSData+CopyWithRange";
+			sourceTree = "<group>";
+		};
+		7816DA61212703ED002D18AC /* Authority */ = {
+			isa = PBXGroup;
+			children = (
+				7816DA512126E4BA002D18AC /* AuthorityObject.h */,
+				7816DA522126E4BA002D18AC /* AuthorityObject.m */,
+				7816DA8221296334002D18AC /* SpecialAuthorityObject.h */,
+				7816DA8321296334002D18AC /* SpecialAuthorityObject.m */,
+				7816DA622127040C002D18AC /* AccountAuthoriyObject.h */,
+				7816DA632127040C002D18AC /* AccountAuthoriyObject.m */,
+				7816DA592126FC7C002D18AC /* PublicKeyAuthorityObject.h */,
+				7816DA5A2126FC7C002D18AC /* PublicKeyAuthorityObject.m */,
+				7816DA5D2126FC9C002D18AC /* BitAddressAuthorityObject.h */,
+				7816DA5E2126FC9C002D18AC /* BitAddressAuthorityObject.m */,
+			);
+			path = Authority;
+			sourceTree = "<group>";
+		};
+		7816DA6621270F99002D18AC /* AuthorityTests */ = {
+			isa = PBXGroup;
+			children = (
+				7816DA6721270FC1002D18AC /* AuthoriyTest.m */,
+			);
+			path = AuthorityTests;
+			sourceTree = "<group>";
+		};
+		7816DA6921284BC0002D18AC /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				7816DA4D2126DA06002D18AC /* AccountObject.h */,
+				7816DA4E2126DA06002D18AC /* AccountObject.m */,
+				7816DA61212703ED002D18AC /* Authority */,
+				7816DA6A21284BE6002D18AC /* Option */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		7816DA6A21284BE6002D18AC /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				7816DA6B21284C04002D18AC /* AccountOptionObject.h */,
+				7816DA6C21284C04002D18AC /* AccountOptionObject.m */,
+				7816DA6F21284D3A002D18AC /* VoteIdObject.h */,
+				7816DA7021284D3A002D18AC /* VoteIdObject.m */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
+		7816DA7321284F6F002D18AC /* NSObject+DataToObject */ = {
+			isa = PBXGroup;
+			children = (
+				7816DA7421284FAD002D18AC /* NSObject+DataToObject.h */,
+				7816DA7521284FAD002D18AC /* NSObject+DataToObject.m */,
+				7816DA7A21291290002D18AC /* DataTransformBind.h */,
+				7816DA7B21291290002D18AC /* DataTransformBind.m */,
+			);
+			path = "NSObject+DataToObject";
+			sourceTree = "<group>";
+		};
+		7816DA7E21294E44002D18AC /* AccountTests */ = {
+			isa = PBXGroup;
+			children = (
+				7816DA7F21294E54002D18AC /* AccountoptionsTest */,
+				7816DA6621270F99002D18AC /* AuthorityTests */,
+				7816DA8921297C89002D18AC /* AccountTest.m */,
+			);
+			path = AccountTests;
+			sourceTree = "<group>";
+		};
+		7816DA7F21294E54002D18AC /* AccountoptionsTest */ = {
+			isa = PBXGroup;
+			children = (
+				7816DA8021294E70002D18AC /* AccountOptionsTest.m */,
+			);
+			path = AccountoptionsTest;
+			sourceTree = "<group>";
+		};
+		7816DA8B212988F5002D18AC /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				7816DAA8212D4A6D002D18AC /* AssetObject.h */,
+				7816DAA9212D4A6D002D18AC /* AssetObject.m */,
+				7816DAAC212D4AF8002D18AC /* AssetOptions */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		7816DA982129B2FB002D18AC /* LocalFile */ = {
+			isa = PBXGroup;
+			children = (
+				7816DA942129ACF0002D18AC /* BitsharesLocalWalletFile.h */,
+				7816DA952129ACF0002D18AC /* BitsharesLocalWalletFile.m */,
+				7816DA992129B38A002D18AC /* WalletExtraKey.h */,
+				7816DA9A2129B38A002D18AC /* WalletExtraKey.m */,
+				7816DAA4212AAB9A002D18AC /* PlainKey.h */,
+				7816DAA5212AAB9A002D18AC /* PlainKey.m */,
+			);
+			path = LocalFile;
+			sourceTree = "<group>";
+		};
+		7816DA9D212A72EB002D18AC /* LocalFileTests */ = {
+			isa = PBXGroup;
+			children = (
+				7816DA9E212A7463002D18AC /* LocalFileTest.m */,
+			);
+			path = LocalFileTests;
+			sourceTree = "<group>";
+		};
+		7816DAAC212D4AF8002D18AC /* AssetOptions */ = {
+			isa = PBXGroup;
+			children = (
+				7816DAAD212D4E25002D18AC /* AssetOption.h */,
+				7816DAAE212D4E25002D18AC /* AssetOption.m */,
+				7816DAB1212D5221002D18AC /* AssetPermissionObject.h */,
+				7816DAB2212D5221002D18AC /* AssetPermissionObject.m */,
+			);
+			path = AssetOptions;
+			sourceTree = "<group>";
+		};
+		7816DAB5212E60F8002D18AC /* AssetTests */ = {
+			isa = PBXGroup;
+			children = (
+				7816DAB9212E71A3002D18AC /* AssetTest.m */,
+			);
+			path = AssetTests;
 			sourceTree = "<group>";
 		};
 		781B148D211A9471006B9043 = {
@@ -223,6 +469,7 @@
 		781B1499211A9471006B9043 /* BitsharesWallet */ = {
 			isa = PBXGroup;
 			children = (
+				7816DA982129B2FB002D18AC /* LocalFile */,
 				7890A60921251FE800B01BA0 /* Transaction */,
 				78DC37062123B2E800A4B4D7 /* ChainObject */,
 				78DC37052123B2B700A4B4D7 /* Operations */,
@@ -231,6 +478,8 @@
 				78DC36F52121B68600A4B4D7 /* BaseFunction */,
 				781B149A211A9471006B9043 /* BitsharesWallet.h */,
 				781B149B211A9471006B9043 /* Info.plist */,
+				7816DA8C212989D7002D18AC /* BitsharesWalletObject.h */,
+				7816DA8D212989D7002D18AC /* BitsharesWalletObject.m */,
 			);
 			path = BitsharesWallet;
 			sourceTree = "<group>";
@@ -238,11 +487,15 @@
 		781B14A4211A9471006B9043 /* BitsharesWalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				7816DAB5212E60F8002D18AC /* AssetTests */,
+				7816DA9D212A72EB002D18AC /* LocalFileTests */,
+				7816DA7E21294E44002D18AC /* AccountTests */,
 				78EC9D1D21255A0800DBC447 /* Transaction */,
 				7890A6122125265900B01BA0 /* OperationsTests */,
 				7890A5EF2123CC8700B01BA0 /* ChainObjectTest */,
 				7890A5EE2123CC4100B01BA0 /* BaseFunctionTest */,
 				781B14A7211A9471006B9043 /* Info.plist */,
+				781B14A5211A9471006B9043 /* BitsharesWalletTests.m */,
 			);
 			path = BitsharesWalletTests;
 			sourceTree = "<group>";
@@ -276,14 +529,45 @@
 			path = Sha256Diggest;
 			sourceTree = "<group>";
 		};
+		788DD4262126562A006C1161 /* UploadBaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				788DD42721265646006C1161 /* UploadBaseModel.h */,
+				788DD42821265646006C1161 /* UploadBaseModel.m */,
+				788DD42B212667DF006C1161 /* UploadParams.h */,
+				788DD42C212667DF006C1161 /* UploadParams.m */,
+			);
+			path = UploadBaseModel;
+			sourceTree = "<group>";
+		};
+		788DD42F21266E6F006C1161 /* CallBackModel */ = {
+			isa = PBXGroup;
+			children = (
+				788DD43021266EA3006C1161 /* CallBackModel.h */,
+				788DD43121266EA3006C1161 /* CallBackModel.m */,
+			);
+			path = CallBackModel;
+			sourceTree = "<group>";
+		};
+		788DD4342126B358006C1161 /* WebsocketResultModel */ = {
+			isa = PBXGroup;
+			children = (
+				788DD4352126B374006C1161 /* WebsocketResultModel.h */,
+				788DD4362126B374006C1161 /* WebsocketResultModel.m */,
+				78C84EB92133E642004DE8AB /* WebsocketResultErrorParse.h */,
+				78C84EBA2133E642004DE8AB /* WebsocketResultErrorParse.m */,
+			);
+			path = WebsocketResultModel;
+			sourceTree = "<group>";
+		};
 		7890A5EE2123CC4100B01BA0 /* BaseFunctionTest */ = {
 			isa = PBXGroup;
 			children = (
 				782A608A211D5B9200EB2F99 /* NSDataCopyWithRangeTests.m */,
 				78F6B5E3211D66F700D445D9 /* SHA256DiggestTests.m */,
-				781B14A5211A9471006B9043 /* BitsharesWalletTests.m */,
 				781B14B6211AE595006B9043 /* Base58ObjectTests.m */,
 				78F6B5E5211DB81400D445D9 /* KeyTests.m */,
+				7816DA7821285171002D18AC /* DataToTransferObjectTest.m */,
 			);
 			path = BaseFunctionTest;
 			sourceTree = "<group>";
@@ -294,6 +578,7 @@
 				7890A5F02123CCAB00B01BA0 /* ObjectIdTest.m */,
 				7890A5F22123CDBF00B01BA0 /* AssetAmountObjectTest.m */,
 				7890A6022124028C00B01BA0 /* MemoTest.m */,
+				78C84EB721339225004DE8AB /* ChainDynamicGlobalPropertiesTest.m */,
 			);
 			path = ChainObjectTest;
 			sourceTree = "<group>";
@@ -348,6 +633,7 @@
 		78DC36F52121B68600A4B4D7 /* BaseFunction */ = {
 			isa = PBXGroup;
 			children = (
+				7816DA7321284F6F002D18AC /* NSObject+DataToObject */,
 				7890A61A21254C0900B01BA0 /* NSDate+UTCDate */,
 				7890A6042124270700B01BA0 /* BaseConfig */,
 				7890A5F42123D1B600B01BA0 /* PackData */,
@@ -380,8 +666,13 @@
 		78DC37002122DCE400A4B4D7 /* Websocket */ = {
 			isa = PBXGroup;
 			children = (
+				788DD4342126B358006C1161 /* WebsocketResultModel */,
+				788DD42F21266E6F006C1161 /* CallBackModel */,
+				788DD4262126562A006C1161 /* UploadBaseModel */,
 				78DC37012122DD2000A4B4D7 /* WebsocketClient.h */,
 				78DC37022122DD2000A4B4D7 /* WebsocketClient.m */,
+				7816DA9021298E26002D18AC /* BitsharesWalletError.h */,
+				7816DA9221299147002D18AC /* WebsocketBlockChainApi.h */,
 			);
 			path = Websocket;
 			sourceTree = "<group>";
@@ -404,11 +695,17 @@
 			children = (
 				78DC370B2123B52100A4B4D7 /* ObjectId.h */,
 				78DC370C2123B52100A4B4D7 /* ObjectId.m */,
+				78C84EB3213385D0004DE8AB /* ChainDynamicGlobalProperties.h */,
+				78C84EB4213385D0004DE8AB /* ChainDynamicGlobalProperties.m */,
+				7816DABB212E7AC0002D18AC /* Price.h */,
+				7816DABC212E7AC0002D18AC /* Price.m */,
 				78C0067E2123BE0D00CF8CE6 /* AssetAmountObject.h */,
 				78C0067F2123BE0D00CF8CE6 /* AssetAmountObject.m */,
 				7890A5FE2123DD1B00B01BA0 /* Memo.h */,
 				7890A5FF2123DD1B00B01BA0 /* Memo.m */,
 				78326CF82123C28F00838BE2 /* ObjectToDataProtocol.h */,
+				7816DA6921284BC0002D18AC /* Account */,
+				7816DA8B212988F5002D18AC /* Asset */,
 			);
 			path = ChainObject;
 			sourceTree = "<group>";
@@ -477,31 +774,58 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78112A15211D5A01002337D9 /* NSData+CopyWithRange.h in Headers */,
+				788DD42921265646006C1161 /* UploadBaseModel.h in Headers */,
+				7816DA9121298E26002D18AC /* BitsharesWalletError.h in Headers */,
+				7816DA8E212989D7002D18AC /* BitsharesWalletObject.h in Headers */,
+				7816DA9321299147002D18AC /* WebsocketBlockChainApi.h in Headers */,
+				7816DA7C21291290002D18AC /* DataTransformBind.h in Headers */,
 				78DC37092123B31D00A4B4D7 /* BaseOperation.h in Headers */,
-				781128DF211C8A6A002337D9 /* PrivateKey.h in Headers */,
+				7816DA7121284D3A002D18AC /* VoteIdObject.h in Headers */,
+				78DC37032122DD2000A4B4D7 /* WebsocketClient.h in Headers */,
+				7816DA6D21284C04002D18AC /* AccountOptionObject.h in Headers */,
+				7816DA5B2126FC7C002D18AC /* PublicKeyAuthorityObject.h in Headers */,
+				7816DA572126E626002D18AC /* BitAddress.h in Headers */,
 				78DC370D2123B52100A4B4D7 /* ObjectId.h in Headers */,
 				7890A6212125570400B01BA0 /* SignedTransaction.h in Headers */,
+				7816DA4F2126DA06002D18AC /* AccountObject.h in Headers */,
+				7816DA532126E4BA002D18AC /* AuthorityObject.h in Headers */,
 				7890A6072124271900B01BA0 /* BaseConfig.h in Headers */,
 				78C006802123BE0D00CF8CE6 /* AssetAmountObject.h in Headers */,
-				781B14BB211AF83C006B9043 /* NSData+HashData.h in Headers */,
-				78DC37032122DD2000A4B4D7 /* WebsocketClient.h in Headers */,
-				78DC36F32121B45700A4B4D7 /* NSData+Base16.h in Headers */,
+				7816DA5F2126FC9C002D18AC /* BitAddressAuthorityObject.h in Headers */,
 				7890A5FC2123DB9200B01BA0 /* TransferOperation.h in Headers */,
-				7890A61D21254C7800B01BA0 /* NSDate+UTCDate.h in Headers */,
-				781B14A8211A9471006B9043 /* BitsharesWallet.h in Headers */,
+				7816DA8421296334002D18AC /* SpecialAuthorityObject.h in Headers */,
 				7890A6002123DD1B00B01BA0 /* Memo.h in Headers */,
-				7890A5F72123D1C700B01BA0 /* PackData.h in Headers */,
-				78F6B63E21213A1E00D445D9 /* RIPEMD160Diggest.h in Headers */,
-				781B14B4211A9537006B9043 /* Base58Object.h in Headers */,
+				7816DA642127040C002D18AC /* AccountAuthoriyObject.h in Headers */,
 				78DC36F92121B6B900A4B4D7 /* ChainId.h in Headers */,
-				782A608F211D5E7A00EB2F99 /* SHA256Diggest.h in Headers */,
 				7890A60C2125201100B01BA0 /* Transaction.h in Headers */,
 				78326CF92123C28F00838BE2 /* ObjectToDataProtocol.h in Headers */,
 				7890A6102125202B00B01BA0 /* OperationContent.h in Headers */,
-				78F6B63A212136C800D445D9 /* Diggest.h in Headers */,
-				78F6B5EE2121249C00D445D9 /* secp256k1.h in Headers */,
+				788DD4372126B374006C1161 /* WebsocketResultModel.h in Headers */,
 				78F6B6422121528400D445D9 /* PublicKey.h in Headers */,
+				788DD42D212667DF006C1161 /* UploadParams.h in Headers */,
+				7816DA962129ACF0002D18AC /* BitsharesLocalWalletFile.h in Headers */,
+				7816DAAF212D4E25002D18AC /* AssetOption.h in Headers */,
+				7816DAB3212D5221002D18AC /* AssetPermissionObject.h in Headers */,
+				7816DAAA212D4A6D002D18AC /* AssetObject.h in Headers */,
+				7816DAA6212AAB9A002D18AC /* PlainKey.h in Headers */,
+				7816DABD212E7AC0002D18AC /* Price.h in Headers */,
+				7816DA9B2129B38A002D18AC /* WalletExtraKey.h in Headers */,
+				788DD43221266EA3006C1161 /* CallBackModel.h in Headers */,
+				781128DF211C8A6A002337D9 /* PrivateKey.h in Headers */,
+				781B14A8211A9471006B9043 /* BitsharesWallet.h in Headers */,
+				78C84EB5213385D0004DE8AB /* ChainDynamicGlobalProperties.h in Headers */,
+				78112A15211D5A01002337D9 /* NSData+CopyWithRange.h in Headers */,
+				7816DA7621284FAD002D18AC /* NSObject+DataToObject.h in Headers */,
+				781B14B4211A9537006B9043 /* Base58Object.h in Headers */,
+				7890A5F72123D1C700B01BA0 /* PackData.h in Headers */,
+				78C84EBB2133E642004DE8AB /* WebsocketResultErrorParse.h in Headers */,
+				78F6B63E21213A1E00D445D9 /* RIPEMD160Diggest.h in Headers */,
+				782A608F211D5E7A00EB2F99 /* SHA256Diggest.h in Headers */,
+				78F6B5EE2121249C00D445D9 /* secp256k1.h in Headers */,
+				781B14BB211AF83C006B9043 /* NSData+HashData.h in Headers */,
+				78DC36F32121B45700A4B4D7 /* NSData+Base16.h in Headers */,
+				7890A61D21254C7800B01BA0 /* NSDate+UTCDate.h in Headers */,
+				78F6B63A212136C800D445D9 /* Diggest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,26 +948,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				78DC36FA2121B6B900A4B4D7 /* ChainId.m in Sources */,
+				78C84EB6213385D0004DE8AB /* ChainDynamicGlobalProperties.m in Sources */,
 				78DC370E2123B52100A4B4D7 /* ObjectId.m in Sources */,
 				781128E0211C8A6A002337D9 /* PrivateKey.mm in Sources */,
+				7816DA502126DA06002D18AC /* AccountObject.m in Sources */,
+				7816DA5C2126FC7C002D18AC /* PublicKeyAuthorityObject.m in Sources */,
 				781B14B5211A9537006B9043 /* Base58Object.m in Sources */,
 				7890A5FD2123DB9200B01BA0 /* TransferOperation.m in Sources */,
+				7816DA972129ACF0002D18AC /* BitsharesLocalWalletFile.m in Sources */,
 				7890A60D2125201100B01BA0 /* Transaction.m in Sources */,
+				788DD4382126B374006C1161 /* WebsocketResultModel.m in Sources */,
+				78C84EBC2133E642004DE8AB /* WebsocketResultErrorParse.m in Sources */,
+				7816DA542126E4BA002D18AC /* AuthorityObject.m in Sources */,
+				7816DA6E21284C04002D18AC /* AccountOptionObject.m in Sources */,
+				7816DAB0212D4E25002D18AC /* AssetOption.m in Sources */,
+				7816DA7721284FAD002D18AC /* NSObject+DataToObject.m in Sources */,
 				7890A5F82123D1C700B01BA0 /* PackData.m in Sources */,
+				7816DA652127040C002D18AC /* AccountAuthoriyObject.m in Sources */,
 				782A6090211D5E7A00EB2F99 /* SHA256Diggest.m in Sources */,
+				7816DA602126FC9C002D18AC /* BitAddressAuthorityObject.m in Sources */,
+				7816DA582126E626002D18AC /* BitAddress.m in Sources */,
 				781B14BC211AF83C006B9043 /* NSData+HashData.m in Sources */,
+				7816DA8521296334002D18AC /* SpecialAuthorityObject.m in Sources */,
+				788DD42A21265646006C1161 /* UploadBaseModel.m in Sources */,
 				78112A16211D5A01002337D9 /* NSData+CopyWithRange.m in Sources */,
 				78DC370A2123B31D00A4B4D7 /* BaseOperation.m in Sources */,
 				78F6B63B212136C800D445D9 /* Diggest.m in Sources */,
+				7816DAA7212AAB9A002D18AC /* PlainKey.m in Sources */,
 				78DC37042122DD2000A4B4D7 /* WebsocketClient.m in Sources */,
 				7890A6112125202B00B01BA0 /* OperationContent.m in Sources */,
 				7890A61E21254C7800B01BA0 /* NSDate+UTCDate.m in Sources */,
 				78F6B6432121528400D445D9 /* PublicKey.m in Sources */,
+				7816DABE212E7AC0002D18AC /* Price.m in Sources */,
+				7816DAAB212D4A6D002D18AC /* AssetObject.m in Sources */,
 				7890A6012123DD1B00B01BA0 /* Memo.m in Sources */,
+				788DD42E212667DF006C1161 /* UploadParams.m in Sources */,
+				7816DA8F212989D7002D18AC /* BitsharesWalletObject.m in Sources */,
+				7816DAB4212D5221002D18AC /* AssetPermissionObject.m in Sources */,
 				7890A6082124271900B01BA0 /* BaseConfig.m in Sources */,
 				7890A6222125570400B01BA0 /* SignedTransaction.m in Sources */,
+				7816DA9C2129B38A002D18AC /* WalletExtraKey.m in Sources */,
 				78F6B63F21213A1E00D445D9 /* RIPEMD160Diggest.m in Sources */,
 				78DC36F42121B45700A4B4D7 /* NSData+Base16.m in Sources */,
+				7816DA7221284D3A002D18AC /* VoteIdObject.m in Sources */,
+				7816DA7D21291290002D18AC /* DataTransformBind.m in Sources */,
+				788DD43321266EA3006C1161 /* CallBackModel.m in Sources */,
 				78C006812123BE0D00CF8CE6 /* AssetAmountObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,12 +1001,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7816DA8121294E70002D18AC /* AccountOptionsTest.m in Sources */,
 				781B14B7211AE595006B9043 /* Base58ObjectTests.m in Sources */,
+				7816DA8A21297C89002D18AC /* AccountTest.m in Sources */,
+				7816DABA212E71A3002D18AC /* AssetTest.m in Sources */,
 				7890A6192125461700B01BA0 /* OperationContentTest.m in Sources */,
 				7890A5F12123CCAB00B01BA0 /* ObjectIdTest.m in Sources */,
+				7816DA9F212A7463002D18AC /* LocalFileTest.m in Sources */,
 				781B14A6211A9471006B9043 /* BitsharesWalletTests.m in Sources */,
 				7890A6032124028C00B01BA0 /* MemoTest.m in Sources */,
+				78C84EB821339225004DE8AB /* ChainDynamicGlobalPropertiesTest.m in Sources */,
+				7816DA7921285171002D18AC /* DataToTransferObjectTest.m in Sources */,
 				7890A5F32123CDBF00B01BA0 /* AssetAmountObjectTest.m in Sources */,
+				7816DA6821270FC1002D18AC /* AuthoriyTest.m in Sources */,
 				78F6B5E4211D66F700D445D9 /* SHA256DiggestTests.m in Sources */,
 				78EC9D1F21255A2F00DBC447 /* SignedTransactionTest.m in Sources */,
 				782A608B211D5B9200EB2F99 /* NSDataCopyWithRangeTests.m in Sources */,

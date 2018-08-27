@@ -30,6 +30,12 @@
     return ctx;
 }
 
+- (instancetype)initWithKeyData:(NSData *)keyData {
+    if (self = [super init]) {
+    }
+    return self;
+}
+
 - (instancetype)initWithPrivateKey:(NSString *)privateKey {
     if (self = [super init]) {
         NSData *data = [Base58Object decodeWithSha256Base58StringCheckSum:privateKey];

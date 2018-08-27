@@ -46,7 +46,13 @@
     
     [sig signWithPrikey:priKey];
     
-    PublicKey *pub = [[PublicKey alloc] initWithSignCompactSigntures:array.firstObject sha256Data:[[sig transformToData] sha256Data]  checkCanonical:YES];
+    NSData *sha256Data = [[sig transformToData] sha256Data];
+    
+    PublicKey *pub = [[PublicKey alloc] initWithSignCompactSigntures:array.firstObject sha256Data:sha256Data checkCanonical:YES];
+    
+    PublicKey *pub1 = [[PublicKey alloc] initWithSignCompactSigntures:@"1c0afd2670066d00fe9d0b55685b76310d2fb203b018e966316773c1916c84384607579988acf5c8ed52a1c6958ef8ab6fda9c68469fddd00ccc10e371205961e1" sha256Data:sha256Data checkCanonical:YES];
+    
+    XCTAssert([pub1.keyData isEqualToData:pub.keyData]);
     
     XCTAssert([pub.keyData isEqualToData:priKey.publicKey.keyData]);
     

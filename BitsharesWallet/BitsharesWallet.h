@@ -17,5 +17,11 @@ FOUNDATION_EXPORT double BitsharesWalletVersionNumber;
 FOUNDATION_EXPORT const unsigned char BitsharesWalletVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <BitsharesWallet/PublicHeader.h>
-#import <BitsharesWallet/PrivateKey.h>
+//#import <BitsharesWallet/PrivateKey.h>
+//#import <BitsharesWallet/WebsocketClient.h>
+//#import <BitsharesWallet/CallBackModel.h>
+#import <BitsharesWallet/BitsharesWalletObject.h>
+#import <BitsharesWallet/BaseConfig.h>
+#import <BitsharesWallet/OperationContent.h>
+#import <BitsharesWallet/AccountAuthoriyObject.h>
 

@@ -11,6 +11,8 @@
 #import "NSData+HashData.h"
 #import "BaseConfig.h"
 #import "ChainId.h"
+#import "OperationContent.h"
+#import "BaseOperation.h"
 @implementation SignedTransaction
 
 - (instancetype)init {
@@ -56,6 +58,19 @@
     dic[@"signatures"] = self.signatures;
     
     return [dic copy];
+}
+
+- (NSArray *)needSignedKeys {
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (OperationContent *content in self.operations) {
+        for (PublicKey *publicKey in ((BaseOperation *)content.operationContent).requiredAuthority) {
+            if (![array containsObject:publicKey]) {
+                [array addObject:publicKey];
+            }
+        }
+    }
+    return array;
 }
 
 @end

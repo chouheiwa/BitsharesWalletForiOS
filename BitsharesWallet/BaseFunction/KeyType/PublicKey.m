@@ -113,4 +113,32 @@
     return NO;
 }
 
++ (instancetype)generateFromObject:(NSString *)object {
+    if (![object isKindOfClass:[NSString class]]) return nil;
+    
+    return [[self alloc] initWithAllPubkeyString:object];
+}
+
+- (id)generateToTransferObject {
+    return [self description];
+}
+
+- (NSData *)transformToData {
+    return self.keyData;
+}
+
+- (NSInteger)dataSize {
+    return 33;
+}
+
+- (NSUInteger)hash {
+    return [self.keyData hash];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    PublicKey *public = [[PublicKey alloc] initWithKeyData:self.keyData];
+    
+    return public; 
+}
+
 @end

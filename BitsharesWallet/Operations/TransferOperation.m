@@ -12,6 +12,8 @@
 #import "Memo.h"
 #import "PackData.h"
 #import "NSData+HashData.h"
+#import "AssetObject.h"
+#import "Price.h"
 
 @implementation TransferOperation
 
@@ -58,6 +60,40 @@
     
     
     [super setValue:value forKey:key];
+}
+
+- (AssetAmountObject *)caculateFeeWithFeeDic:(NSDictionary *)feeDictionary payFeeAsset:(AssetObject *)asset {
+    long baseAmount = [feeDictionary[@"fee"] integerValue];
+    
+    if (self.memo) {
+        baseAmount += (self.memo.dataSize * [feeDictionary[@"price_per_kbyte"] integerValue]) / 1024;
+    }
+    
+    AssetAmountObject *objectBase = asset.options.core_exchange_rate.base;
+    
+    AssetAmountObject *objectQuote = asset.options.core_exchange_rate.quote;
+    
+    NSDecimalNumber *base = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%ld",objectBase.amount]];
+    
+    NSDecimalNumber *quote = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%ld",objectQuote.amount]];
+    
+    NSDecimalNumber *finalResult = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%ld",baseAmount]];
+    
+    NSDecimalNumberHandler *roundUp = [NSDecimalNumberHandler
+                                       decimalNumberHandlerWithRoundingMode:NSRoundUp
+                                       scale:0
+                                       raiseOnExactness:NO
+                                       raiseOnOverflow:NO
+                                       raiseOnUnderflow:NO
+                                       raiseOnDivideByZero:YES];
+    
+    if (objectBase.assetId.instance == 0) {
+        finalResult = [[finalResult decimalNumberByMultiplyingBy:quote] decimalNumberByDividingBy:base withBehavior:roundUp];
+    }else {
+        finalResult = [[finalResult decimalNumberByMultiplyingBy:base] decimalNumberByDividingBy:quote withBehavior:roundUp];
+    }
+    
+    return [[AssetAmountObject alloc] initFromAssetId:asset.identifier amount:finalResult.longValue];
 }
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {

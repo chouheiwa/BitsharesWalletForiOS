@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "BaseConfig.h"
+#import <BitsharesWallet/BaseConfig.h>
 #import "OperationContent.h"
 #import "TransferOperation.h"
 #import "ObjectId.h"

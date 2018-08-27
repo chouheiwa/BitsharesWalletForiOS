@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import "NSData+CopyWithRange.h"
+#import "PackData.h"
+#import "NSData+HashData.h"
 @interface NSDataCopyWithRangeTests : XCTestCase
 
 @end
@@ -46,6 +48,10 @@
         
     }
     
+}
+
+- (void)testPackData {
+    [[PackData packUnsigedInteger:100000] logDataDetail:@"111"];
 }
 
 @end

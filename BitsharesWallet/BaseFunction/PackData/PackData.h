@@ -16,6 +16,8 @@
 
 + (NSData *)packUnsigedInteger:(NSInteger)value;
 
++ (NSInteger)unpackUnsignedIntegerWithData:(NSData *)data byteLength:(int *)byteLength;
+
 + (NSData *)packLongValue:(long)value;
 
 + (NSData *)packUInt64_T:(uint64_t)value;
@@ -23,5 +25,7 @@
 + (NSData *)packBool:(BOOL)boolValue;
 
 + (NSData *)packDate:(NSDate *)date;
+
++ (NSData *)packString:(NSString *)string;
 
 @end

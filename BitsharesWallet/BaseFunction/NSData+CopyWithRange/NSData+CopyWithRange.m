@@ -12,7 +12,7 @@
 
 - (instancetype)copyWithRange:(NSRange)range {
     if (range.location + range.length > self.length) {
-        NSException *exception = [NSException exceptionWithName:@"Data out of bounds" reason:[NSString stringWithFormat:@"Data length %u can't copy at location:%u length:%u",self.length,range.location,range.length] userInfo:nil];
+        NSException *exception = [NSException exceptionWithName:@"Data out of bounds" reason:[NSString stringWithFormat:@"Data length %lu can't copy at location:%lu length:%lu",self.length,range.location,range.length] userInfo:nil];
         [exception raise];
     }
     

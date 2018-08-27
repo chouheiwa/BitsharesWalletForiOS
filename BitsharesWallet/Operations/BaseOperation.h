@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "ObjectToDataProtocol.h"
 @class PublicKey;
-
+@class AssetAmountObject;
+@class AssetObject;
 @interface BaseOperation : NSObject<ObjectToDataProtocol>
 
 /**
  操作所需的签名公钥
  */
-@property (nonatomic, strong, readonly) NSArray <PublicKey *> *requiredAuthority;
+@property (nonatomic, strong) NSArray <PublicKey *> *requiredAuthority;
+
+- (AssetAmountObject *)caculateFeeWithFeeDic:(NSDictionary *)feeDictionary payFeeAsset:(AssetObject *)asset;
 
 
 @end

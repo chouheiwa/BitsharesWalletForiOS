@@ -48,6 +48,26 @@
     return [data copy];
 }
 
++ (NSInteger)unpackUnsignedIntegerWithData:(NSData *)data byteLength:(int *)byteLength{
+    Byte *byte = (Byte *)data.bytes;
+    
+    int i = 0;
+    long value = 0;
+    int b = 0;
+    int by = 0;
+    
+    do {
+        b = byte[i];
+        value |= (b & 0x7f) << by;
+        by += 7;
+        i ++;
+    } while ((b & 0x80) > 0);
+    
+    *byteLength = i;
+    
+    return value;
+}
+
 + (NSData *)packLongValue:(long)value {
     Byte *bytes = (Byte *)malloc(8);
     
@@ -98,6 +118,18 @@
     free(byte);
     
     return data;
+}
+
++ (NSData *)packString:(NSString *)string {
+    NSData *stringData = [string dataUsingEncoding:4];
+    
+    NSMutableData *data = [NSMutableData dataWithCapacity:stringData.length + 2];
+    
+    [data appendData:[self packUnsigedInteger:stringData.length]];
+    
+    [data appendData:stringData];
+    
+    return data.copy;
 }
 
 @end

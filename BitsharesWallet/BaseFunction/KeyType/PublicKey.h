@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface PublicKey : NSObject
+#import "ObjectToDataProtocol.h"
+@interface PublicKey : NSObject<ObjectToDataProtocol,NSCopying>
 
 @property (nonatomic, copy, readonly) NSData *keyData;
 

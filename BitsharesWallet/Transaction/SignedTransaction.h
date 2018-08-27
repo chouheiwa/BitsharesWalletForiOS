@@ -8,10 +8,13 @@
 
 #import "Transaction.h"
 @class PrivateKey;
+@class PublicKey;
 @interface SignedTransaction : Transaction
 
 @property (nonatomic, copy) NSArray <NSString *>*signatures;
 
 - (void)signWithPrikey:(PrivateKey *)prikey;
+
+- (NSArray <PublicKey *>*)needSignedKeys;
 
 @end

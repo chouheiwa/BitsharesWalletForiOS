@@ -12,7 +12,7 @@
 #import "ChainId.h"
 #import "NSData+HashData.h"
 #import "BaseConfig.h"
-
+#import "BitAddress.h"
 @interface KeyTests : XCTestCase
 
 @end
@@ -59,6 +59,18 @@
     XCTAssert(pub.keyData != nil);
 }
 
+- (void)testPublicKeyArrayContain {
+    PublicKey *pub = [[PublicKey alloc] initWithPubkeyString:@"6VdkZYfdrpZ8da8chVTDfXYGiAxBn6cNraVunH2EvKzd5SWnBR"];
+    
+    PublicKey * pub1 = [pub copy];
+    
+    XCTAssert(pub != pub1);
+    
+    NSArray *array = @[pub1];
+    
+    XCTAssert([array containsObject:pub]);
+}
+
 - (void)testSignCompact {
     PrivateKey *pri = [[PrivateKey alloc] initWithPrivateKey:@"5KcTYx3RKi4h1wnQQ8xJCMtK8P5JTXSqbnZCA1ed7qWQDQsEeFz"];
     
@@ -75,4 +87,17 @@
     XCTAssert([pubKey.keyData isEqualToData:pubKey1.keyData]);
 }
 
+- (void)testBitAddress {
+    PrivateKey *pri = [[PrivateKey alloc] initWithPrivateKey:@"5KcTYx3RKi4h1wnQQ8xJCMtK8P5JTXSqbnZCA1ed7qWQDQsEeFz"];
+    
+    NSLog(@"%ld",pri.keyData.length);
+    
+    BitAddress *address = [[BitAddress alloc] initWithKeyData:pri.publicKey.keyData];
+    
+    XCTAssert(address.keyData.length == 20);
+    
+    BOOL result = [address.description isEqualToString:[NSString stringWithFormat:@"%@2o4YSHeqf9gawD1sHghLVZ5BpigqePuAD",[BaseConfig prefix]]];
+    
+    XCTAssert(result);
+}
 @end
