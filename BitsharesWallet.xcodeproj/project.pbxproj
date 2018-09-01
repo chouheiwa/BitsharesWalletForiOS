@@ -70,6 +70,11 @@
 		782A608F211D5E7A00EB2F99 /* SHA256Diggest.h in Headers */ = {isa = PBXBuildFile; fileRef = 782A608D211D5E7A00EB2F99 /* SHA256Diggest.h */; };
 		782A6090211D5E7A00EB2F99 /* SHA256Diggest.m in Sources */ = {isa = PBXBuildFile; fileRef = 782A608E211D5E7A00EB2F99 /* SHA256Diggest.m */; };
 		78326CF92123C28F00838BE2 /* ObjectToDataProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78326CF82123C28F00838BE2 /* ObjectToDataProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		783577252137B92F005C2D7E /* OperationsHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 783577242137B92F005C2D7E /* OperationsHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		783577282137D329005C2D7E /* LimitOrderCreateOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 783577262137D329005C2D7E /* LimitOrderCreateOperation.h */; };
+		783577292137D329005C2D7E /* LimitOrderCreateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 783577272137D329005C2D7E /* LimitOrderCreateOperation.m */; };
+		783AC2B52134E5740043B513 /* BrainKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 783AC2B32134E5730043B513 /* BrainKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		784F45112134DF9B00F59705 /* BrainKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 784F45102134DF9B00F59705 /* BrainKey.m */; };
 		788DD42921265646006C1161 /* UploadBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 788DD42721265646006C1161 /* UploadBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		788DD42A21265646006C1161 /* UploadBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 788DD42821265646006C1161 /* UploadBaseModel.m */; };
 		788DD42D212667DF006C1161 /* UploadParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 788DD42B212667DF006C1161 /* UploadParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -209,6 +214,11 @@
 		782A608D211D5E7A00EB2F99 /* SHA256Diggest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHA256Diggest.h; sourceTree = "<group>"; };
 		782A608E211D5E7A00EB2F99 /* SHA256Diggest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHA256Diggest.m; sourceTree = "<group>"; };
 		78326CF82123C28F00838BE2 /* ObjectToDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectToDataProtocol.h; sourceTree = "<group>"; };
+		783577242137B92F005C2D7E /* OperationsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationsHeader.h; sourceTree = "<group>"; };
+		783577262137D329005C2D7E /* LimitOrderCreateOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitOrderCreateOperation.h; sourceTree = "<group>"; };
+		783577272137D329005C2D7E /* LimitOrderCreateOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitOrderCreateOperation.m; sourceTree = "<group>"; };
+		783AC2B32134E5730043B513 /* BrainKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainKey.h; sourceTree = "<group>"; };
+		784F45102134DF9B00F59705 /* BrainKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrainKey.m; sourceTree = "<group>"; };
 		788DD42721265646006C1161 /* UploadBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadBaseModel.h; sourceTree = "<group>"; };
 		788DD42821265646006C1161 /* UploadBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadBaseModel.m; sourceTree = "<group>"; };
 		788DD42B212667DF006C1161 /* UploadParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadParams.h; sourceTree = "<group>"; };
@@ -306,6 +316,8 @@
 				78F6B6412121528400D445D9 /* PublicKey.m */,
 				7816DA552126E626002D18AC /* BitAddress.h */,
 				7816DA562126E626002D18AC /* BitAddress.m */,
+				783AC2B32134E5730043B513 /* BrainKey.h */,
+				784F45102134DF9B00F59705 /* BrainKey.m */,
 				78F6B5E72121249C00D445D9 /* secp256k1 */,
 			);
 			path = KeyType;
@@ -684,8 +696,11 @@
 				78DC37082123B31D00A4B4D7 /* BaseOperation.m */,
 				7890A5FA2123DB9200B01BA0 /* TransferOperation.h */,
 				7890A5FB2123DB9200B01BA0 /* TransferOperation.m */,
+				783577262137D329005C2D7E /* LimitOrderCreateOperation.h */,
+				783577272137D329005C2D7E /* LimitOrderCreateOperation.m */,
 				7890A60E2125202B00B01BA0 /* OperationContent.h */,
 				7890A60F2125202B00B01BA0 /* OperationContent.m */,
+				783577242137B92F005C2D7E /* OperationsHeader.h */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -812,8 +827,11 @@
 				7816DA9B2129B38A002D18AC /* WalletExtraKey.h in Headers */,
 				788DD43221266EA3006C1161 /* CallBackModel.h in Headers */,
 				781128DF211C8A6A002337D9 /* PrivateKey.h in Headers */,
+				783AC2B52134E5740043B513 /* BrainKey.h in Headers */,
 				781B14A8211A9471006B9043 /* BitsharesWallet.h in Headers */,
+				783577252137B92F005C2D7E /* OperationsHeader.h in Headers */,
 				78C84EB5213385D0004DE8AB /* ChainDynamicGlobalProperties.h in Headers */,
+				783577282137D329005C2D7E /* LimitOrderCreateOperation.h in Headers */,
 				78112A15211D5A01002337D9 /* NSData+CopyWithRange.h in Headers */,
 				7816DA7621284FAD002D18AC /* NSObject+DataToObject.h in Headers */,
 				781B14B4211A9537006B9043 /* Base58Object.h in Headers */,
@@ -989,11 +1007,13 @@
 				7890A6222125570400B01BA0 /* SignedTransaction.m in Sources */,
 				7816DA9C2129B38A002D18AC /* WalletExtraKey.m in Sources */,
 				78F6B63F21213A1E00D445D9 /* RIPEMD160Diggest.m in Sources */,
+				784F45112134DF9B00F59705 /* BrainKey.m in Sources */,
 				78DC36F42121B45700A4B4D7 /* NSData+Base16.m in Sources */,
 				7816DA7221284D3A002D18AC /* VoteIdObject.m in Sources */,
 				7816DA7D21291290002D18AC /* DataTransformBind.m in Sources */,
 				788DD43321266EA3006C1161 /* CallBackModel.m in Sources */,
 				78C006812123BE0D00CF8CE6 /* AssetAmountObject.m in Sources */,
+				783577292137D329005C2D7E /* LimitOrderCreateOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

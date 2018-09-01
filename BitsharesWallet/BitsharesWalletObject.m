@@ -12,8 +12,12 @@
 
 #import "ObjectId.h"
 #import "BitsharesLocalWalletFile.h"
-#import "TransferOperation.h"
 #import "AuthorityObject.h"
+
+#import "NSObject+DataToObject.h"
+
+#import "TransferOperation.h"
+#import "LimitOrderCreateOperation.h"
 
 @interface BitsharesWalletObject ()
 
@@ -34,14 +38,16 @@
         
         _walletFile = [[BitsharesLocalWalletFile alloc] init];
         
-        
+        _walletFile.chain_id = chainId;
     }
     return self;
 }
 
 - (BOOL)judgeCanUseWithError:(NSError **)error {
     if (self.walletFile.isLocked) {
-        *error = [NSError errorWithDomain:@"Wallet Locked Error,you should use function unlock" code:WebsocketErrorCodeWalletLockedError userInfo:nil];
+        if (error) {
+            *error = [NSError errorWithDomain:@"Wallet Locked Error,you should use function unlock" code:WebsocketErrorCodeWalletLockedError userInfo:nil];
+        }
     }
     return YES;
 }
@@ -51,8 +57,9 @@
         [self.walletFile lockWithString:password];
         return;
     }
-    
-    *error = [NSError errorWithDomain:@"Wallet Set Password Error" code:WebsocketErrorCodeWalletLockedError userInfo:nil];
+    if (error) {
+        *error = [NSError errorWithDomain:@"Wallet Set Password Error" code:WebsocketErrorCodeWalletLockedError userInfo:nil];
+    }
 }
 
 - (void)unlockPassword:(NSString *)password error:(NSError *__autoreleasing *)error {
@@ -64,7 +71,10 @@
         NSData *data = [NSData dataWithContentsOfFile:path];
         
         if (!data) {
-            *error = [NSError errorWithDomain:[NSString stringWithFormat:@"File not exists at path:%@",path] code:WebsocketErrorCodeWalletFileNotFound userInfo:nil];
+            if (error) {
+                *error = [NSError errorWithDomain:[NSString stringWithFormat:@"File not exists at path:%@",path] code:WebsocketErrorCodeWalletFileNotFound userInfo:nil];
+            }
+            
             return NO;
         }
         
@@ -77,14 +87,19 @@
         _walletFile = [BitsharesLocalWalletFile generateFromObject:dic];
         
         if (!_walletFile) {
-            *error = [NSError errorWithDomain:[NSString stringWithFormat:@"File format is not right"] code:WebsocketErrorCodeWalletFileFormatWrong userInfo:nil];
+            if (error) {
+                *error = [NSError errorWithDomain:[NSString stringWithFormat:@"File format is not right"] code:WebsocketErrorCodeWalletFileFormatWrong userInfo:nil];
+            }
+            
             return NO;
         }
         
         return YES;
     }@catch (NSException *exception) {
         // 捕获到的异常exception
-        *error = [NSError errorWithDomain:exception.reason code:WebsocketErrorCodeWalletLoadExceptionRaise userInfo:exception.userInfo];
+        if (error) {
+            *error = [NSError errorWithDomain:exception.reason code:WebsocketErrorCodeWalletLoadExceptionRaise userInfo:exception.userInfo];
+        }
     }
     
     return NO;
@@ -92,6 +107,10 @@
 
 - (BOOL)importKey:(PrivateKey *)privateKey forAccount:(AccountObject *)account error:(NSError *__autoreleasing *)error{
     return [self.walletFile importKey:privateKey ForAccount:account error:error];
+}
+
+- (PrivateKey *)getPrivateKey:(PublicKey *)key {
+    return [self.walletFile getPrivateKeyFromPublicKey:key error:nil];
 }
 
 - (BOOL)saveWalletFileAtPath:(NSString *)path error:(NSError *__autoreleasing *)error {
@@ -106,6 +125,10 @@
     self.client = [[WebsocketClient alloc] initWithUrl:url closedCallBack:connectedError];
     
     [self.client connectWithTimeOut:timeOut];
+    
+    self.walletFile.ws_server = url;
+    
+    _connectedUrl = url;
 }
 
 - (void)setConnectStatusChange:(void (^)(WebsocketConnectStatus))connectStatusChange {
@@ -175,6 +198,40 @@
     [self sendWithChainApi:(WebsocketBlockChainApiDataBase) method:(WebsocketBlockChainMethodApiCall) params:uploadParams callBack:callBackModel];
 }
 
+- (void)listAccountBalance:(AccountObject *)account success:(void (^)(NSArray<AssetAmountObject *> *))success error:(ErrorDone)error {
+    UploadParams *uploadParams = [[UploadParams alloc] init];
+    
+    uploadParams.methodName = @"get_account_balances";
+    
+    uploadParams.totalParams = @[account.identifier.generateToTransferObject,@[]];
+    
+    CallBackModel *callBackModel = [[CallBackModel alloc] init];
+    
+    callBackModel.successResult = ^(NSArray * result) {
+        success([AssetAmountObject generateFromDataArray:result]);
+    };
+    
+    [self sendWithChainApi:(WebsocketBlockChainApiDataBase) method:(WebsocketBlockChainMethodApiCall) params:uploadParams callBack:callBackModel];
+}
+
+- (void)listAssets:(NSString *)lowerBounds nLimit:(NSInteger)nLimit success:(void (^)(NSArray<AssetObject *> *))success error:(ErrorDone)error {
+    UploadParams *uploadParams = [[UploadParams alloc] init];
+
+    uploadParams.methodName = @"list_assets";
+    
+    uploadParams.totalParams = @[lowerBounds,@(nLimit)];
+    
+    CallBackModel *callBackModel = [[CallBackModel alloc] init];
+    
+    callBackModel.successResult = ^(NSArray * result) {
+        success([AssetObject generateFromDataArray:result]);
+    };
+    
+    callBackModel.errorResult = error;
+    
+    [self sendWithChainApi:(WebsocketBlockChainApiDataBase) method:(WebsocketBlockChainMethodApiCall) params:uploadParams callBack:callBackModel];
+}
+
 - (void)getAsset:(NSString *)assetIdOrName success:(void (^)(AssetObject *))success error:(void (^)(NSError *))error {
     ObjectId *object = [ObjectId generateFromObject:assetIdOrName];
     
@@ -196,6 +253,24 @@
         NSDictionary *dic = result.firstObject;
         
         success([AssetObject generateFromObject:dic]);
+    };
+    
+    callBackModel.errorResult = error;
+    
+    [self sendWithChainApi:(WebsocketBlockChainApiDataBase) method:(WebsocketBlockChainMethodApiCall) params:uploadParams callBack:callBackModel];
+}
+
+- (void)getAssets:(NSArray<ObjectId *> *)assetIds success:(void (^)(NSArray<AssetObject *> *))success error:(ErrorDone)error {
+    UploadParams *uploadParams = [[UploadParams alloc] init];
+
+    uploadParams.methodName = @"get_objects";
+    
+    uploadParams.totalParams = @[[NSObject generateToTransferArray:assetIds]];
+    
+    CallBackModel *callBackModel = [[CallBackModel alloc] init];
+    
+    callBackModel.successResult = ^(NSArray * result) {
+        success([AssetObject generateFromDataArray:result]);
     };
     
     callBackModel.errorResult = error;
@@ -254,7 +329,7 @@
     [self sendWithChainApi:WebsocketBlockChainApiDataBase method:(WebsocketBlockChainMethodApiCall) params:uploadParams callBack:callBackModel];
 }
 
-- (void)transferFromAccount:(AccountObject *)fromAccount toAccount:(AccountObject *)toAccount assetAmount:(AssetAmountObject *)assetAmount memo:(NSString *)memo feePayingAsset:(AssetObject *)feePayingAsset success:(void (^) (SignedTransaction *))success error:(void (^) (NSError *))error {
+- (void)transferFromAccount:(AccountObject *)fromAccount toAccount:(AccountObject *)toAccount assetAmount:(AssetAmountObject *)assetAmount memo:(NSString *)memo feePayingAsset:(AssetObject *)feePayingAsset success:(SignedTransactionDone)success error:(void (^) (NSError *))error {
     NSError *errors;
     
     if (![self judgeCanUseWithError:&errors]) {
@@ -304,6 +379,41 @@
     } error:error lazyLoad:YES];
 }
 
+- (void)sellAssetFromAccount:(AccountObject *)account amountToSell:(AssetAmountObject *)amountToSell minToReceiveAsset:(AssetAmountObject *)minToReceive expirationDate:(NSDate *)expirationDate fillOrKill:(BOOL)fillOrKill feeAsset:(AssetObject *)feeAsset success:(SignedTransactionDone)success error:(ErrorDone)error {
+    NSError *errors;
+    if (![self judgeCanUseWithError:&errors]) {
+        error(errors);
+        return;
+    }
+    
+    LimitOrderCreateOperation *operation = [[LimitOrderCreateOperation alloc] init];
+    
+    operation.seller = account.identifier;
+    
+    operation.amount_to_sell = amountToSell;
+    
+    operation.min_to_receive = minToReceive;
+    
+    operation.expiration = expirationDate;
+    
+    operation.fill_or_kill = fillOrKill;
+    
+    [self getOperationBaseFeeObjectWithSuccess:^(NSDictionary *result) {
+        operation.requiredAuthority = account.active.publicKeys;
+        
+        operation.fee = [operation caculateFeeWithFeeDic:result[@1] payFeeAsset:feeAsset];
+        
+        OperationContent *content = [[OperationContent alloc] initWithOperation:operation];
+        
+        SignedTransaction *signedTran = [[SignedTransaction alloc] init];
+        
+        signedTran.operations = @[content];
+        
+        [self signedTransaction:signedTran success:success error:error];
+    } error:error lazyLoad:YES];
+    
+}
+
 - (void)signedTransaction:(SignedTransaction *)signedTransaction success:(void (^) (SignedTransaction *))success error:(void (^) (NSError *))error {
     NSError *errors;
     if (![self judgeCanUseWithError:&errors]) {
@@ -340,6 +450,14 @@
         [self sendWithChainApi:WebsocketBlockChainApiNetworkBroadcast method:(WebsocketBlockChainMethodApiCall) params:uploadParams callBack:callBackModel];
         
     } error:error];
+}
+
+- (BrainKey *)deriveKeyWithBrainKey:(NSString *)brainKey {
+    return [BrainKey deriveFromBrainKey:brainKey];
+}
+
+- (BrainKey *)suggestBrainKey {
+    return [BrainKey suggestBrainKey];
 }
 
 - (NSArray <AccountObject *> *)myaccounts {

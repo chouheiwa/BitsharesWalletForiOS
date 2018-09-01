@@ -85,7 +85,10 @@
     if (self.cipher_keys.isNew) {
         NSError *errors = [NSError errorWithDomain:@"Wallet file is new!Need to set password first" code:WebsocketErrorCodeWalletNotSet userInfo:nil];
         
-        *error = errors;
+        if (error) {
+            *error = errors;
+        }
+        
         return NO;
     }
     
@@ -94,7 +97,9 @@
     if (!result) {
         NSError *errors = [NSError errorWithDomain:@"Wallet unlock error" code:WebsocketErrorCodeWalletUnlockError userInfo:nil];
         
-        *error = errors;
+        if (error) {
+            *error = errors;
+        }
     }else {
         self.locked = NO;
     }
@@ -153,7 +158,9 @@
         return YES;
     }
     
-    *error = [NSError errorWithDomain:[NSString stringWithFormat:@"Private key %@ is not owner by account %@",key.description,account.name] code:WebsocketErrorCodeWalletKeyAccountError userInfo:nil];
+    if (error) {
+        *error = [NSError errorWithDomain:[NSString stringWithFormat:@"Private key %@ is not owner by account %@",key.description,account.name] code:WebsocketErrorCodeWalletKeyAccountError userInfo:nil];
+    }
     
     return NO;
 }
@@ -166,7 +173,10 @@
 
 - (BOOL)judgeLockedWithError:(NSError **)error {
     if (self.isLocked) {
-        *error = [NSError errorWithDomain:@"Wallet locked!" code:WebsocketErrorCodeWalletLockedError userInfo:nil];
+        if (error) {
+            *error = [NSError errorWithDomain:@"Wallet locked!" code:WebsocketErrorCodeWalletLockedError userInfo:nil];
+        }
+        
         return YES;
     }
     return NO;

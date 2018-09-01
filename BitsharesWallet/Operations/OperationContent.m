@@ -8,10 +8,12 @@
 
 #import "OperationContent.h"
 #import "TransferOperation.h"
+#import "LimitOrderCreateOperation.h"
 #import "PackData.h"
 typedef NS_ENUM(NSInteger,OperationType) {
     OperationTypeNotFind = -1,
-    OperationTypeTransfer = 0
+    OperationTypeTransfer = 0,
+    OperationTypeLimitOrderCreate,
 };
 
 @implementation OperationContent
@@ -32,7 +34,8 @@ typedef NS_ENUM(NSInteger,OperationType) {
     
     if (!dic) {
         dic = @{
-                @(OperationTypeTransfer):NSStringFromClass([TransferOperation class])
+                @(OperationTypeTransfer):NSStringFromClass([TransferOperation class]),
+                @(OperationTypeLimitOrderCreate):NSStringFromClass([LimitOrderCreateOperation class]);
                 };
     }
     return dic;

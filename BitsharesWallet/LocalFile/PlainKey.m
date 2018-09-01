@@ -68,7 +68,7 @@
     
     int publicKeyDataLength = 33;
 
-    do {
+    while (data.length > publicKeyDataLength) {
         NSData *publicData = [data copyWithRange:NSMakeRange(0, publicKeyDataLength)];
         
         data = [data copyWithRange:NSMakeRange(publicKeyDataLength, data.length - publicKeyDataLength)];
@@ -85,8 +85,7 @@
         _keyDic[pub] = privateKey;
         
         data = [data copyWithRange:NSMakeRange(finalSize + stringSize, data.length - (finalSize + stringSize))];
-    } while (data.length > publicKeyDataLength);
-    
+    }
     
     NSAssert(data.length == 0, @"Data size not correct");
     

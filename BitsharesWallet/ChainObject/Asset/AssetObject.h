@@ -32,4 +32,6 @@
 
 - (AssetAmountObject *)getAmountFromNormalFloatString:(NSString *)string;
 
+- (NSString *)getRealAmountFromAssetAmount:(AssetAmountObject *)assetAmount;
+
 @end

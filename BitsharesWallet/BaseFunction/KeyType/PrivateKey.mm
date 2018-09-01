@@ -39,10 +39,10 @@
 - (instancetype)initWithPrivateKey:(NSString *)privateKey {
     if (self = [super init]) {
         NSData *data = [Base58Object decodeWithSha256Base58StringCheckSum:privateKey];
-    
-        assert(data != nil);
         
-        _keyData = [data copyWithRange:NSMakeRange(1, data.length - 1)];;
+        if (data.length > 1) {
+            _keyData = [data copyWithRange:NSMakeRange(1, data.length - 1)];
+        }
     }
     return self;
 }
@@ -63,17 +63,19 @@
     
     int result = secp256k1_ec_pubkey_create([PrivateKey getBaseContext], (unsigned char*)pubkeyData, (int *)&pubkeylength, (unsigned char*)self.keyData.bytes, 1);
     
-    assert(result == 1);
-    
-    assert(pubkeylength == 33);
-    
-    NSData *data = [NSData dataWithBytes:pubkeyData length:33];
+    if (result == 1 && pubkeylength == 33) {
+        NSData *data = [NSData dataWithBytes:pubkeyData length:33];
+        
+        free(pubkeyData);
+        
+        PublicKey *publicKey = [[PublicKey alloc] initWithKeyData:data];
+        
+        return publicKey;
+    }
     
     free(pubkeyData);
-    
-    PublicKey *publicKey = [[PublicKey alloc] initWithKeyData:data];
-    
-    return publicKey;
+
+    return nil;
 }
 
 - (NSString *)description {
@@ -96,13 +98,17 @@
     }
     
     int result = secp256k1_ec_pubkey_tweak_mul( [PrivateKey getBaseContext], (unsigned char*) byte, 33, (unsigned char*)self.keyData.bytes );
-    assert(result == 1);
-    
-    NSData *totalData = [NSData dataWithBytes:(byte + 1) length:32];
+    if (result == 1) {
+        NSData *totalData = [NSData dataWithBytes:(byte + 1) length:32];
+        
+        free(byte);
+        
+        return [totalData sha512Data];
+    }
     
     free(byte);
     
-    return [totalData sha512Data];
+    return nil;
 }
 
 static int extended_nonce_function( unsigned char *nonce32, const unsigned char *msg32,
@@ -123,7 +129,7 @@ static int extended_nonce_function( unsigned char *nonce32, const unsigned char 
     do {
         int result = secp256k1_ecdsa_sign_compact([PrivateKey getBaseContext],(unsigned char*) sha256Data.bytes,(unsigned char*)(bytes + 1),(unsigned char*)self.keyData.bytes,extended_nonce_function,&counter,&recid);
         
-        assert(result == 1);
+        if(result != 1) return nil;
     } while (requireCanonical && ![PublicKey isCanonical:bytes]);
     
     bytes[0] = 27 + 4 + recid;

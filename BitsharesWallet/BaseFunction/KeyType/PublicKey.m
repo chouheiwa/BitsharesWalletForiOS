@@ -41,10 +41,12 @@
     if (self = [super init]) {
         int nV = ((char *)signCompactData.bytes)[0];
         
-        assert(nV > 26 && nV < 34);
+        if (!(nV > 26 && nV < 34)) {
+            return nil;
+        }
         
         if (checkCanonical) {
-            assert([PublicKey isCanonical:(Byte *)signCompactData.bytes]);
+            if(![PublicKey isCanonical:(Byte *)signCompactData.bytes]) return nil;
         }
         
         Byte *bytes = (Byte *)malloc(33);
@@ -53,8 +55,8 @@
         
         int result = secp256k1_ecdsa_recover_compact( [PublicKey getBaseContext], (unsigned char*) sha256Data.bytes, (unsigned char*) (signCompactData.bytes + 1), (unsigned char*) bytes, (int*) &pkLength, 1, (nV - 27) & 3 );
         
-        assert(result == 1);
-        assert(pkLength == 33);
+        if(result != 1) return nil;
+        if(pkLength != 33) return nil;
         
         _keyData = [NSData dataWithBytes:bytes length:33];
         

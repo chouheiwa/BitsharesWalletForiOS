@@ -9,6 +9,7 @@
 #import "AssetObject.h"
 #import "NSObject+DataToObject.h"
 #import "AssetAmountObject.h"
+#import "ObjectId.h"
 @implementation AssetObject
 
 - (instancetype)initWithDic:(NSDictionary *)dic {
@@ -72,6 +73,15 @@
     AssetAmountObject *asset = [[AssetAmountObject alloc] initFromAssetId:self.identifier amount:number.longValue];
     
     return asset;
+}
+
+- (NSString *)getRealAmountFromAssetAmount:(AssetAmountObject *)assetAmount {
+    if (assetAmount.assetId.instance != self.identifier.instance) return nil;
+    
+    
+    NSDecimalNumber *demicimal = [NSDecimalNumber decimalNumberWithMantissa:assetAmount.amount exponent:-self.precision isNegative:NO];
+    
+    return demicimal.stringValue;
 }
 
 @end

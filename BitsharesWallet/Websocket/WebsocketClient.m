@@ -211,10 +211,15 @@
 }
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error {
     self.closeCallBack(error);
+    self.connectStatus = WebsocketConnectStatusClosed;
     [self.websocket closeWithCode:-25 reason:nil];
 }
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
     if (code == -25) return;
+    self.connectStatus = WebsocketConnectStatusClosed;
+    if (!reason) {
+        reason = @"Websocket unknown closed reason";
+    }
     
     self.closeCallBack([NSError errorWithDomain:reason code:code userInfo:nil]);
 }

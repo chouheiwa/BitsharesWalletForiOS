@@ -21,7 +21,9 @@ FOUNDATION_EXPORT const unsigned char BitsharesWalletVersionString[];
 //#import <BitsharesWallet/WebsocketClient.h>
 //#import <BitsharesWallet/CallBackModel.h>
 #import <BitsharesWallet/BitsharesWalletObject.h>
-#import <BitsharesWallet/BaseConfig.h>
-#import <BitsharesWallet/OperationContent.h>
-#import <BitsharesWallet/AccountAuthoriyObject.h>
+#import <BitsharesWallet/BaseOperation.h>
+#import <BitsharesWallet/WalletExtraKey.h>
+#import <BitsharesWallet/PlainKey.h>
+#import <BitsharesWallet/OperationsHeader.h>
+
 

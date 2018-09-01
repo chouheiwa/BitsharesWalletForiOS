@@ -10,7 +10,7 @@
 #import "BitsharesWalletObject.h"
 #import "AssetObject.h"
 #import "PrivateKey.h"
-
+#import "BrainKey.h"
 #import "NSData+HashData.h"
 #import "NSData+Base16.h"
 
@@ -81,9 +81,6 @@
             NSError *error;
             
             [wallet importKey:[[PrivateKey alloc] initWithPrivateKey:@"5JzhaUrXLTrAXmFqEF1AMnNJN9oCPgJN66NLHb2rZ9d8VQaeQiQ"] forAccount:tusowner error:&error];
-            
-            
-            
             [wallet getAccount:@"tusowner6" success:^(AccountObject *tusowner1) {
                 [wallet getAsset:@"1.3.0" success:^(AssetObject *BDS) {
                     [wallet transferFromAccount:tusowner toAccount:tusowner1 assetAmount:[BDS getAmountFromNormalFloatString:@"100"] memo:@"1111" feePayingAsset:BDS success:^(SignedTransaction *sign) {
@@ -99,6 +96,51 @@
             }];
         } error:^(NSError *error) {
             XCTFail(@"%@",error);
+        }];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:^(NSError * _Nullable error) {
+        
+    }];
+}
+
+- (void)testSuggestBrainKey {
+    BrainKey *key = [BrainKey suggestBrainKey];
+    
+    NSLog(@"%@\n%@\n%@",key.brainKey,key.priKey,key.pubKey);
+}
+
+- (void)testListAsset {
+    XCTestExpectation *websocketTestException = [self expectationWithDescription:@"websocket test"];
+    
+    [self connectSuccessDone:^(BitsharesWalletObject *wallet) {
+        [wallet listAssets:@"A" nLimit:100 success:^(NSArray<AssetObject *> *result) {
+            XCTAssert(result.count > 0);
+            [websocketTestException fulfill];
+        } error:^(NSError *error) {
+            XCTFail(@"%@",error);
+            [websocketTestException fulfill];
+        }];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:^(NSError * _Nullable error) {
+        
+    }];
+}
+
+- (void)testListBalance {
+    XCTestExpectation *websocketTestException = [self expectationWithDescription:@"websocket test"];
+    
+    [self connectSuccessDone:^(BitsharesWalletObject *wallet) {
+        [wallet getAccount:@"1.2.6" success:^(AccountObject *result) {
+            [wallet listAccountBalance:result success:^(NSArray<AssetAmountObject *> *array) {
+                XCTAssert(array.firstObject);
+                [websocketTestException fulfill];
+            } error:^(NSError *error) {
+                
+            }];
+        } error:^(NSError *error) {
+            
         }];
     }];
     
